@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 
-export default class NavigationComponents extends Component {
+export default class NavigationContainer extends Component {
     constructor (){
         super ()
     }
