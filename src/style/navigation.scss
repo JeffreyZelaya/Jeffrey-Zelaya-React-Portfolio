@@ -5,6 +5,7 @@
 
     .left-side {
         display: flex;
+
     }
 
     .nav-link-wrapper {
@@ -16,23 +17,22 @@
         font-size: 0.9rem;
 
         
+        
         a {
             color: $grey;
             text-decoration: none;
             &:hover {
                 color: black;
-                
             }
         }
-        
-        &:hover{
+
+        &:hover {
             border-bottom: 1px solid black;
         }
-       
-        .nav-link-active{
+
+        .nav-link-active {
             border-bottom: 1px solid black;
             color: black;
-            
         }
     }
 }
