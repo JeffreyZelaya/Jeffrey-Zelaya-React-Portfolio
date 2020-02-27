@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import loginImg from "../../../static/assets/images/auth/login.jpg"
-import Login from "../auth/login";
-
+import Login from '../auth/login'
 export default class Auth extends Component {
     constructor() {
         super()
     } 
-    
-    
     render() {
         return (
             <div className="auth-page-wrapper">
@@ -17,11 +14,9 @@ export default class Auth extends Component {
                         backgroundImage: `url(${loginImg})`
                     }}
                 />
-
                 <div className="right-column">
-                    <Login/>
+                    <Login />
                 </div>
-
             </div>
         )
     } 
