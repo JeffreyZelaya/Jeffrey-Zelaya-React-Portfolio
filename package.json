@@ -1,5 +1,5 @@
 {
-  "name": "tyson-boren-react-portfolio",
+  "name": "jeffrey-zelaya-react-portfolio",
   "version": "1.0.0",
   "description": "Personal portfolio app built in React",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TysonBoren/Tyson-Boren-Portfolio"
+    "url": "https://github.com/JeffreyZelaya/Jeffrey-Zelaya-Portfolio"
   },
   "keywords": [
     "es6",
@@ -28,7 +28,7 @@
   "author": "Tyson Boren",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TysonBoren/Tyson-Boren-Portfolio/issues"
+    "url": "https://github.com/JeffreyZelaya/Jeffrey-Zelaya-Portfolio"
   },
   "homepage": "https://github.com/bottega-code-school/js-builder",
   "dependencies": {

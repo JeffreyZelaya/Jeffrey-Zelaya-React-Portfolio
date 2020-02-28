@@ -39,7 +39,7 @@ export default class Login extends Component {
                
         }).catch(error => {
             this.setState({
-                errorText: "an error occurd"
+                errorText: "an error occured"
             })
             this.props.handleUnSuccessfulAuth()
 
