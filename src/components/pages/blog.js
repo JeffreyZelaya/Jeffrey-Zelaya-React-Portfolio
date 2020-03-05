@@ -30,13 +30,13 @@ export default class Blog extends Component {
     }
     
     render() {
+        const blogRecords = this.state.blogItems.map(blogItem => {
+            return <h1 key = {blogItem.id}>{blogItem.title}</h1>
+        })
+
         return (
             <div>
-                <h2>Blog</h2>
-
-                <div>
-                    <Link to="/about-me">Read more aboutthe one and only Jeffrey Zelaya</Link>
-                </div>
+                {blogRecords}
             </div>
         )
     }
