@@ -5,7 +5,7 @@ import draftToHtml from "draftjs-to-html";
 import htmlToDraft from "html-to-draftjs";
 
 
-export default class RichTExtEditor extends Component {
+export default class RichTextEditor extends Component {
   constructor(props) {
     super(props);
 
@@ -13,7 +13,7 @@ export default class RichTExtEditor extends Component {
       editorState: EditorState.createEmpty()
     }
   }
-  
+
   render() {
     return (
       <div>
