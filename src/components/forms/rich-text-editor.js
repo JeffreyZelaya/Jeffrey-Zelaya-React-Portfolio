@@ -35,7 +35,7 @@ export default class RichTextEditor extends Component {
       reader.onerror = error => {};
     }
 
-    uploadFile(file) {
+  uploadFile(file) {
       return new Promise((resolve, reject) => {
         this.getBase64(file, data => resolve({ data: { link: data } }));
       });
