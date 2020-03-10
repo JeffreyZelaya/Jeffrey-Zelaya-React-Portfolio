@@ -12,7 +12,7 @@ export default class BlogForm extends Component {
             title: "",
             blog_status: "",
             content: "",
-            featurd_image: ""
+            featured_image: ""
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -22,7 +22,8 @@ export default class BlogForm extends Component {
         this.conponentConfig = this.componentConfig.bind(this);
         this.djsConfig = this.djsConfig.bind(this);
         this.handleFeaturedImageDrop = this.handleFeaturedImageDrop.bind(this);
-          
+       
+        this.featuredImageRef = React.createRef()
       }
 
       componentConfig() {
@@ -42,7 +43,7 @@ export default class BlogForm extends Component {
 
       handleFeaturedImageDrop() {
           return {
-            addedfile: file => this.setState({featurd_image: file})
+            addedfile: file => this.setState({featured_image: file})
           }
       }
 
@@ -51,13 +52,21 @@ export default class BlogForm extends Component {
     }
 
     buildForm() {
-      let formData = new FormData() 
+        let formData = new FormData() 
 
-      formData.append("portfolio_blog[title]", this.state.title)
-      formData.append("portfolio_blog[blog_status]", this.state.blog_status)
-      formData.append("portfolio_blog[content]", this.state.content)
+        formData.append("portfolio_blog[title]", this.state.title)
+        formData.append("portfolio_blog[blog_status]", this.state.blog_status)
+        formData.append("portfolio_blog[content]", this.state.content)
 
-      return formData
+        if(this.state.featured_image) {
+            formData.append(
+                "portfolio_blog[featured_image]",
+                this.state.featured_image
+            )
+        }
+
+
+        return formData
     }
 
     handleSubmit(event) {
@@ -66,14 +75,18 @@ export default class BlogForm extends Component {
         {withCredentials:true}
         )
         .then(response => {
+            if(this.state.featured_image) {
+            this.featuredImageRef.current.dropzone.removeAllFiles()
+            }
             this.setState({
                 title: "",
                 blog_status: "",
-                content: ""
-
+                content: "",
+                featured_image: ""
         }) 
+
         
-            this.props.handleSuccessfullFormSubmission(response.data.portfolio_blog)
+        this.props.handleSuccessfullFormSubmission(response.data.portfolio_blog)
 
         })
         .catch(error => {
@@ -122,6 +135,7 @@ export default class BlogForm extends Component {
 
             <div className="image-uploaders">
                 <DropzoneComponent
+                ref={this.featuredImageRef}
                 config= {this.componentConfig()}
                 djsConfig={this.djsConfig()}
                 eventHandlers={this.handleFeaturedImageDrop()}
