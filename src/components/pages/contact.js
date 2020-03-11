@@ -36,7 +36,7 @@ export default function() {
 
                     <div className="bullet-point-group">
                         <div className="icon">
-                            <FontAwesomeIcon icon="map-marker-alt" />
+                            <FontAwesomeIcon icon="map-marked-alt" />
                         </div>
                         <div className="text">
                             Pleasant Grove, UT

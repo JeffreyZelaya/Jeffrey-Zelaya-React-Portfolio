@@ -6,7 +6,7 @@ import {
     faPenNib,
     faPhone,
     faEnvelopeOpenText,
-    faMapMarkerAlt
+    faMapMarkedAlt
 
 } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -20,7 +20,7 @@ const Icons = () => {
         faPenNib,    
         faPhone, 
         faEnvelopeOpenText,
-        faMapMarkerAlt
+        faMapMarkedAlt
         )
 }
 
