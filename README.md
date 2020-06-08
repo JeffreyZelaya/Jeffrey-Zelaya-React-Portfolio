@@ -1,2 +1,2 @@
-# Tyson Boren React Starter Project
+React Starter Project
 
